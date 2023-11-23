@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #003329;
+    min-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+header{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    padding: 30px ;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.logo{
+    position: absolute;
+    top: -1px;
+    left: 59px;
+    width: 100px;
+    height: auto;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding:  6px 30px;
+    border-radius: 20px;
+    margin: 10px 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.navigation a:hover{
+    background: #359381;
+    color: #f9f9f9;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    top: 300px;
+    font-size: 4em;
+    color: #fff;
+    text-shadow:  2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    padding: 100px;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.botao h1{
+    position: absolute;
+top: 1050px;
+    left: 140px;
+    color: #ffffff;
+}
+.botao a{
+    position: absolute;
+    top: 1120px;
+    left: 150px;
+text-decoration: none;
+    background-color: #003329;
+    color: #fff;
+    border-color: #003329;
+}
+
+.botao a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.botao a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.sec a{
+ text-decoration: none;
+ color: #ffffff;
+ border-radius: 3px;
+ background-color: #f9f9f9;
+}
+
+.sec a:hover{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #003329;
+    border-color: #fff;
+   }
+
+.sec p{
+    font-size:  1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.contato{
+    position: relative;
+    padding: 100px;
+}
+
+.contato h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contato p{
+    font-size:  1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.beneficios{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+
+.beneficios h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.beneficios p{
+    font-size:  1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.final{
+    position: absolute;
+    padding: 100px;
+    text-align: center;
+}
+
+.final p{
+    font-size:  1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.redes {
+    position: fixed;
+    top: 170px;
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .redes a svg {
+    width: 30px;
+    fill: #ffffff;
+    z-index: 1000;
+  }
+  
+  .redes .discord {
+    background-color: rgb(11, 151, 11);
+    z-index: 1000;
+}
+  
+  .redes .github {
+    background-color: rgb(80, 238, 7);
+    z-index: 1000;
+}
+  
+  .redes .instagram {
+    background: #359381;
+    z-index: 1000;
+}
+  
+  .redes a:hover {
+    width: 90px;
+    z-index: 1000;
+  }
+
+  /* Exemplo de consulta de mídia para dispositivos com largura máxima de 475 pixels */
+@media (max-width: 375px) {
+    header {
+        padding: 1px; /* Ajuste conforme necessário */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 50px; 
+    }
+
+    .navigation a {
+        padding: 2px 6px; 
+        margin: 2px 2px; 
+    }
+
+    .parallax #text {
+        top: 88px;
+        font-size: 1em; 
+    }
+
+    .sec {
+        position: absolute;
+        top: 220px;
+        padding: 3px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .sec h2 {
+        background-color: #003329;
+        font-size: 1.5em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+        padding: 10px, 0, 0 , 0;
+    }
+
+    .sec p{
+        font-size: 0.8em;
+    }
+    .contato {
+        position: absolute;
+        top: 580px;
+        padding: 30px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .contato h2 {
+        font-size: 1.2em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    }
+
+    .contato p{
+        font-size: 0.8em;
+    }
+ 
+
+    .redes {
+        top: 130px;
+        width: 50px;
+    }
+
+    .redes a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .redes a:hover {
+        width: 60px;
+    }
+
+    .botao a{
+        left: 40px;
+        top: 550px;
+        font-size: 0.9em;
+        padding: 2px;
+    }
+
+    .botao h1{
+        left: 35px;
+        top: 520px;
+        font-size: 0.8em;
+    }
+
+    .final{
+        top: 700px;
+        white-space: nowrap;
+    }
+
+    .final p {
+        position: absolute;
+        left: 60px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 0.6px; /* Ajuste conforme necessário */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 30px; 
+    }
+
+    .navigation a {
+        padding: 1px 1px; 
+        margin: 1px 1px; 
+    }
+
+    .parallax #text {
+        top: 75px;
+        font-size: 1em; 
+    }
+
+    .sec {
+        position: absolute;
+        top: 220px;
+        padding: 3px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .sec h2 {
+        background-color: #003329;
+        font-size: 1.5em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+        padding: 10px, 0, 0 , 0;
+    }
+
+    .sec p{
+        font-size: 0.8em;
+    }
+    .contato {
+        position: absolute;
+        top: 580px;
+        padding: 30px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .contato h2 {
+        font-size: 1.2em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    }
+
+    .contato p{
+        font-size: 0.8em;
+    }
+ 
+
+    .redes {
+        top: 130px;
+        width: 50px;
+    }
+
+    .redes a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .redes a:hover {
+        width: 60px;
+    }
+
+    .botao a{
+        left: 40px;
+        top: 510px;
+        font-size: 0.9em;
+        padding: 2px;
+    }
+
+    .botao h1{
+        left: 30px;
+        top: 490px;
+        font-size: 0.7em;
+    }
+
+    .final{
+        top: 700px;
+        white-space: nowrap;
+    }
+
+    .final p {
+        position: absolute;
+        left: 38px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 1px; /* Ajuste conforme necessário */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 50px; 
+    }
+
+    .navigation a {
+        padding: 2px 6px; 
+        margin: 2px 2px; 
+    }
+
+    .parallax #text {
+        top: 91px;
+        font-size: 1em; 
+    }
+
+    .sec {
+        position: absolute;
+        top: 220px;
+        padding: 3px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .sec h2 {
+        background-color: #003329;
+        font-size: 1.5em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    padding: 10px, 0, 0 , 0;
+    }
+
+    .sec p{
+        font-size: 0.8em;
+    }
+    .contato {
+        position: absolute;
+        top: 580px;
+        padding: 30px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .contato h2 {
+        font-size: 1.2em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    }
+
+    .contato p{
+        font-size: 0.8em;
+    }
+ 
+
+    .redes {
+        top: 130px;
+        width: 50px;
+    }
+
+    .redes a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .redes a:hover {
+        width: 60px;
+    }
+
+    .botao a{
+        left: 40px;
+        top: 490px;
+        font-size: 0.9em;
+        padding: 2px;
+    }
+
+    .botao h1{
+        left: 30px;
+        top: 470px;
+        font-size: 0.8em;
+    }
+
+    .final{
+        top: 700px;
+        white-space: nowrap;
+    }
+
+    .final p {
+        position: absolute;
+        left: 60px;
+        font-size: 0.7em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px; /* Ajuste conforme necessário */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        width: 80px; 
+    }
+
+    .navigation a {
+        padding: 8px 8px; 
+        margin: 8px 8px; 
+    }
+
+    .parallax #text {
+        top: 180px;
+        font-size: 2em; 
+    }
+
+    .sec {
+        background-color: #003329;
+        position: absolute;
+        top: 410px;
+        padding: 3px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .sec h2 {
+        background-color: #003329;
+        font-size: 1.5em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    padding: 10px, 0, 0 , 0;
+    }
+
+    .sec p{
+        font-size: 0.9em;
+    }
+    .contato {
+        position: absolute;
+        top: 670px;
+        padding: 30px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .contato h2 {
+        font-size: 1.2em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    }
+
+    .contato p{
+        font-size: 0.8em;
+    }
+ 
+
+    .redes {
+        top: 130px;
+        width: 50px;
+    }
+
+    .redes a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .redes a:hover {
+        width: 60px;
+    }
+
+    .botao a{
+        left: 40px;
+        top: 610px;
+        font-size: 0.9em;
+        padding: 2px;
+    }
+
+    .botao h1{
+        left: 35px;
+        top: 590px;
+        font-size: 0.8em;
+    }
+
+    .final{
+        top: 800px;
+        white-space: nowrap;
+    }
+
+    .final p {
+        position: absolute;
+        left: 255px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 1px; /* Ajuste conforme necessário */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 100px; 
+    }
+
+    .navigation a {
+        padding: 10px 10px; 
+        margin: 10px 10px; 
+    }
+
+    .parallax #text {
+        left: 190px;
+        top: 220px;
+        font-size: 3em; 
+    }
+
+    .sec {
+        position: absolute;
+        top: 520px;
+        padding: 3px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .sec h2 {
+        
+        font-size: 2.5em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+        padding: 10px, 0, 0 , 0;
+    }
+
+    .sec p{
+        font-size: 1em;
+    }
+    .contato {
+        position: absolute;
+        top: 790px;
+        padding: 30px; /* Reduzindo ainda mais o padding para telas muito pequenas */
+    }
+
+    .contato h2 {
+        font-size: 2.2em; /* Ajustando ainda mais o tamanho do título para telas muito pequenas */
+        margin-bottom: 15px; /* Ajustando ainda mais a margem inferior para telas muito pequenas */
+    }
+
+    .contato p{
+        font-size: 0.9em;
+    }
+ 
+
+    .redes {
+        top: 130px;
+        width: 90px;
+    }
+
+    .redes a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .redes a:hover {
+        width: 60px;
+    }
+
+    .botao a{
+        left: 40px;
+        top: 770px;
+        font-size: 0.9em;
+        padding: 2px;
+    }
+
+    .botao h1{
+        left: 35px;
+        top: 740px;
+        font-size: 0.9em;
+    }
+
+    .final{
+        top: 890px;
+        white-space: nowrap;
+    }
+
+    .final p {
+        position: absolute;
+        left: 390px;
+        font-size: 0.8em;
+    }
+}
